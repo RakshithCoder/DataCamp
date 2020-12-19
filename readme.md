@@ -12,9 +12,9 @@
     * Different types of weather conditions.
         * Summer, winter.
 ## How does ml work?
-    * Learns patterns from existing data and applies it to new data.
-    * Like you can tell it what spam emails look like, later on it will detect new emails which are spam.
-## Difference b/w Data Science, AI and Machine Learning
+* Learns patterns from existing data and applies it to new data.
+* Like you can tell it what spam emails look like, later on it will detect new emails which are spam.
+## Difference b/w **Data Science, AI and Machine Learning**
 * AI is trying to make computers think like humans. Like:
     * Game playing algorithms
     * Self driving cars
@@ -29,3 +29,8 @@
 
 ![Image of Terms]
 (https://miro.medium.com/max/410/1*4Wl_EOjivZu1qmdUBol7WQ.png)
+
+## What is a **machine learning model?**
+* Representation of a real-world process based on data.
+* If we make a model based on historical traffic data, we can enter a future data into the model to predict how heavy traffic will be there tomorrow.
+* Output can even be a probability of an outcome. Like probability of a tweet being fake.
