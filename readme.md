@@ -11,7 +11,7 @@
 * **Patterns**
     * Different types of weather conditions.
         * Summer, winter.
-## How does ml work?
+## How does **ml work?**
 * Learns patterns from existing data and applies it to new data.
 * Like you can tell it what spam emails look like, later on it will detect new emails which are spam.
 ## Difference b/w **Data Science, AI and Machine Learning**
@@ -27,8 +27,7 @@
 
 * Deep Learning is a subset of AI, which specifically is concentrated on making machines think like humans.
 
-![Image of Terms]
-(https://miro.medium.com/max/410/1*4Wl_EOjivZu1qmdUBol7WQ.png)
+![Image of Terms](https://miro.medium.com/max/410/1*4Wl_EOjivZu1qmdUBol7WQ.png)
 
 ## What is a **machine learning model?**
 * Representation of a real-world process based on data.
