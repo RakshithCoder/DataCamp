@@ -83,7 +83,13 @@
 * So in a nutshell, in ul, we don't really have labels. 
 
 ## MachineLearning Workflow:
-
+* First, we extract features from raw data.
+* Split the dataset into training and testing.
+* Train the model.
+* The model learns only from the training data.
+* And it tries to evaluate what it's learnt from the testing data.
+* The testing data is unseen, i.e it has never seen that data before.
+* If the evaluation is okay and is giving good accuracy, we save the model, otherwise we tune the model and re-train the model.(adding or removing some of the features)
 
   
 
