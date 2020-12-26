@@ -82,6 +82,8 @@
 * Once, the model is trained, it, we give it new observations, i.e new patient in this case and it predict that that specific patient falls into which category. 
 * So in a nutshell, in ul, we don't really have labels. 
 
+## MachineLearning Workflow:
+
 
   
 
