@@ -43,7 +43,7 @@
 * It is used for deciding sequential actions, like a robot deciding its path or its next move in a game.
 * Reinforcement Learning uses game theory.
 
-## Background concepts to be known before supervised and unsupervised learning:
+## **Background concepts to be known before supervised and unsupervised learning:**
 * We know from before that ml **learns** patterns from existing data and applies it to new data.
 * This existing data is called **training data**
 * When a model is being built and learning from training data, that concept is called **training a model**
@@ -73,7 +73,7 @@
     * Once the model is trained, we can give the model new input i.e labels and observations, in our case a new patient/patients and it will predict if that patient has heart disease or not.
 * So in a nutshell, in supervised learning, our training data is labelled, that is we had previous patients who had heart disease, based on labels t or f.
 
-## Unsupervised Learning:
+## **Unsupervised Learning:**
 * We don't have labels in ul, only features.
 * We use this when we want to divide the data into groups based on similiarity.
 * In this case, we'd want to use ul to understand the different groups of patients like one category would be, patients with high cholesterol and other group to be high sugar levels. 
