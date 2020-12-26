@@ -91,6 +91,19 @@
 * The testing data is unseen, i.e it has never seen that data before.
 * If the evaluation is okay and is giving good accuracy, we save the model, otherwise we tune the model and re-train the model.(adding or removing some of the features)
 
+## More info on Supervised and Unsupervised learning:
+* Supervised Learning
+    1. Classification
+    2. Regression
+
+    Classification | Regression
+    -------------- | ----------
+    assigning a **category** | assigning a **continous** variable
+    Like will this customer stop his subscription - Yes, No | How much will this stock be worth?
+    What flower is that? - Rose, Tulip, Carnation | How tall will this child be as an adult?
+    Only a few specific values | Any no. of values with a finite/infinite time interval.
+    SVM | LR
+
   
 
 
