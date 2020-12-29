@@ -82,7 +82,7 @@
 * Once, the model is trained, it, we give it new observations, i.e new patient in this case and it predict that that specific patient falls into which category. 
 * So in a nutshell, in ul, we don't really have labels. 
 
-## MachineLearning Workflow:
+## **MachineLearning Workflow:**
 * First, we extract features from raw data.
 * Split the dataset into training and testing.
 * Train the model.
@@ -91,7 +91,7 @@
 * The testing data is unseen, i.e it has never seen that data before.
 * If the evaluation is okay and is giving good accuracy, we save the model, otherwise we tune the model and re-train the model.(adding or removing some of the features)
 
-## More info on Supervised and Unsupervised learning:
+## **More info on Supervised and Unsupervised learning:**
 * Supervised Learning
     1. Classification
     2. Regression
@@ -104,6 +104,51 @@
     Only a few specific values | Any no. of values with a finite/infinite time interval.
     SVM | LR
 
-  
+* Unsupervised Learning
+    1. Clustering
+    2. Association
+    3. Anomaly Detection
+
+    Clustering | Association | Anomaly Detection
+    ----------- | ------------ | -----------
+    Clustering is similar to classification, but in classification it groups the data based on the labels, like categories must be made based on only those labels. 
+    But in clustering, since it is an unsupervised learning, and there is no label, it groups based on **similarities**, what kind of similarities the algo finds and groups depends, for eg: It could make two groups dog and cat or it could cluster based on color like black, red, green, etc.
+    Eg: K-means. Here we have to mention the no. of clusters beforehand. Take a dataset with unknown flowers, we only have flower names and length. We obviously can't do classification cause we don't how many classes are there, we can just analyze the data manually and decide on the no. of clusters with k-means. 
+    
+    Association involves finding **relationships b/w the observations or finding events that occur together.** Eg: ppl who buy jam are likely to buy butter too. "ppl who bought this also bought this" in amazon.
+
+    Anomaly Detection involves **finding the odd one out.** The odd one out is called an outlier. Eg: Finding out which devices fail faster, which patients resist a fatal disease. 
+
+## Evaluating Performance:
+* This is to see how our model is performing on unseen data.
+    * Supervised Learning:
+        * Evaluating Classification:
+            * Accuracy = No. of correctly predicted observations/total no. of observations
+                * Sometimes when the data is imbalanced, the model will predict the value of the majority class for all predictions and achieve a high accuracy.
+                * So, accuracy is not always the best measure.
+            * Confusion matrix:
+                * TP: A true positive is an outcome where the model correctly predicts the correct class and in reality it is also belongs to the correct class.
+                Eg: Umpire gives a batsman **NOT OUT** when he is **NOT OUT** 
+                * TN: A true negative is an outcome where the model correctly predicts that it is an incorrect class and in reality it is also belongs to the incorrect class.
+                Eg: Umpire gives a batsman **OUT** when he is **OUT**  
+                * FN: A false negative is when the model predicts a class as negative, but in reality it is actually positive. 
+                Eg: Umpire gives a batsman **NOT OUT** when he is **OUT**
+                * FP: A false positive is when the model predicts a class as positive, but in reality it is actually negative.
+                Eg: Umpire gives a batsman **OUT** when he is **NOT OUT**
+            * Sensitivity = How many wrong predictions did the model classify as correct.
+            i.e TP/TP+FN
+        * Evaluating Regression:
+            * Distance b/w the points and the predicted line. Eg:RMS error. 
+    * Unsupervised Learning:
+        * Since, ul doesn't have predicted variables, therefore there is no correct output to compare to.
+        * It depends on the problem and how well the results match your initial objective.
+
+## Improving performance:
+* Once, if you've evaluated the performance of your model, if the performance is not satisfactory, how to improve the model performance.
+    * Dimensionality reduction.
+    * Hyperparameter tuning.
+    * Ensemble methods
+        
+
 
 
