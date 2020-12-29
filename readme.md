@@ -109,14 +109,15 @@
     2. Association
     3. Anomaly Detection
 
-    Clustering | Association | Anomaly Detection
-    ----------- | ------------ | -----------
+    **Clustering:** 
     Clustering is similar to classification, but in classification it groups the data based on the labels, like categories must be made based on only those labels. 
     But in clustering, since it is an unsupervised learning, and there is no label, it groups based on **similarities**, what kind of similarities the algo finds and groups depends, for eg: It could make two groups dog and cat or it could cluster based on color like black, red, green, etc.
     Eg: K-means. Here we have to mention the no. of clusters beforehand. Take a dataset with unknown flowers, we only have flower names and length. We obviously can't do classification cause we don't how many classes are there, we can just analyze the data manually and decide on the no. of clusters with k-means. 
     
+    **Association:**
     Association involves finding **relationships b/w the observations or finding events that occur together.** Eg: ppl who buy jam are likely to buy butter too. "ppl who bought this also bought this" in amazon.
 
+    **Anomaly Detection:**
     Anomaly Detection involves **finding the odd one out.** The odd one out is called an outlier. Eg: Finding out which devices fail faster, which patients resist a fatal disease. 
 
 ## Evaluating Performance:
