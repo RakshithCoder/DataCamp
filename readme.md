@@ -128,6 +128,7 @@
                 * Sometimes when the data is imbalanced, the model will predict the value of the majority class for all predictions and achieve a high accuracy.
                 * So, accuracy is not always the best measure.
             * Confusion matrix:
+                ![Image of CM](https://miro.medium.com/max/625/1*fxiTNIgOyvAombPJx5KGeA.png)
                 * TP: A true positive is an outcome where the model correctly predicts the correct class and in reality it is also belongs to the correct class.
                 Eg: Umpire gives a batsman **NOT OUT** when he is **NOT OUT** 
                 * TN: A true negative is an outcome where the model correctly predicts that it is an incorrect class and in reality it is also belongs to the incorrect class.
