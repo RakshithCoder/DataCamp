@@ -147,9 +147,27 @@
 
 ## Improving performance:
 * Once, if you've evaluated the performance of your model, if the performance is not satisfactory, how to improve the model performance.
-    * Dimensionality reduction.
-    * Hyperparameter tuning.
-    * Ensemble methods
+    * Dimensionality reduction:
+        * Reducing the no. of features(dimensions) in your data.
+        * You might think, more no. of features mean better predictions. Most of the time, some of the features might be irrelevant.
+        * Eg: If we are trying to predict how long it will take us to go to office, time of the day and weather are imp features, but how many bottles of water we drank last year is not imp.
+        * Some features might be highly correlated and carry similar information. We could keep only one feature and still have most information. For example, height and shoe size are highly correlated. Tall people are very likely to have a large shoe size. We could keep only the height without losing much additional information. We could also collapse multiple features into just one underlying feature. If we have two features, height and weight, we can calculate one Body Mass Index feature instead.
+    * Hyperparameter tuning:
+        * A hyperparameter is a parameter whose value is used to control the learning process.
+        * This inturn, affects the model performance.
+        * Eg: Consider an SVM, changing the kernel from linear to polynomial.
+        * Eg: In a deep learning model, batch size, dropout, epochs, etc.
+    * Ensemble methods:
+        * Ensemble methods are techniques that create multiple models and then combine them to produce improved results.
+            * Classification:
+                * Imagine we have three different models A,B,C, we use voting. If model A and model B predicts a student is accepted and model c says the student is not. We accept the most common and the model is accepted since we had two models which predicted properly.
+            * Regression:
+                * We use averaging. model A-8, B-5, C-4.
+                * Avg is 5.67.
+
+
+
+
         
 
 
