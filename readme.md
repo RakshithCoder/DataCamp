@@ -157,6 +157,7 @@
         * This inturn, affects the model performance.
         * Eg: Consider an SVM, changing the kernel from linear to polynomial.
         * Eg: In a deep learning model, batch size, dropout, epochs, etc.
+        * Eg: For a guitar, we change the settings based on the genre, genre is the dataset and guitar settings are the hyperparameters.
     * Ensemble methods:
         * Ensemble methods are techniques that create multiple models and then combine them to produce improved results.
             * Classification:
