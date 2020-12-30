@@ -154,6 +154,7 @@
         * Some features might be highly correlated and carry similar information. We could keep only one feature and still have most information. For example, height and shoe size are highly correlated. Tall people are very likely to have a large shoe size. We could keep only the height without losing much additional information. We could also collapse multiple features into just one underlying feature. If we have two features, height and weight, we can calculate one Body Mass Index feature instead.
     * Hyperparameter tuning:
         * A hyperparameter is a parameter whose value is used to control the learning process.
+        * Hyperparameter is chosen before the learning process by the person making the model.
         * This inturn, affects the model performance.
         * Eg: Consider an SVM, changing the kernel from linear to polynomial.
         * Eg: In a deep learning model, batch size, dropout, epochs, etc.
