@@ -168,7 +168,10 @@
                 * Avg is 5.67.
 
 
-
+Address: No.,, 2, 2nd Main Rd, Chandra Layout, Vijayanagar, Bengaluru, Karnataka 560072
+Hours: 
+Open ⋅ Closes 10PM
+Phone: 099160 30131
 
         
 
