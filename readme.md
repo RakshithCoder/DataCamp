@@ -1,5 +1,5 @@
 # DataCamp Notes
-## What is **Machine Learning?**
+## What is **Machine Learning?**(ppt 1)
 * Set of tools to make **inferences,  predictions and find out patterns** from data.
 ## What Machine Learning **can do?**
 * **Predict** future events
@@ -82,7 +82,7 @@
 * Once, the model is trained, it, we give it new observations, i.e new patient in this case and it predict that that specific patient falls into which category. 
 * So in a nutshell, in ul, we don't really have labels. 
 
-## **MachineLearning Workflow:**
+## **MachineLearning Workflow:**(ppt 2)
 * First, we extract features from raw data.
 * Split the dataset into training and testing.
 * Train the model.
@@ -162,15 +162,104 @@
     * Ensemble methods:
         * Ensemble methods are techniques that create multiple models and then combine them to produce improved results.
             * Classification:
-                * Imagine we have three different models A,B,C, we use voting. If model A and model B predicts a student is accepted and model c says the student is not. We accept the most common and the model is accepted since we had two models which predicted properly.
+                * Imagine we have three different models A,B,C, we use **voting.** If model A and model B predicts a student is accepted and model c says the student is not. We accept the most common and the model is accepted since we had two models which predicted properly.
             * Regression:
-                * We use averaging. model A-8, B-5, C-4.
+                * We use **averaging.** model A-8, B-5, C-4.
                 * Avg is 5.67.
 
+## **Deep Learning:**(ppt 3)
+* Deep Learning uses neural networks, which are similar to neural networks in a human brain.
+    * network consists of neurons.
+* So, it basically means, dl is used in such areas where you want to simulate a human brain.
+* Deep Learning is a subset of ml, which can solve more complex problems than ml, but needs much more data than ml.
+* It is used when the input data are less structured like text or image data and when you have good processing powers like GPU or TPU(because training takes more time).
+* It is also used, when you don't understand the features properly, the **network figures out the features by itself.**
+* Deep learning: neural networks with many neurons.
+* Eg: If budget is passed as an input, the model predicts the box office revenue.
+* Suppose you have more info like advertising amt, star power, timing. So a more complex neural network will look like this, total spending is calculated as a function from budget and ads. Next, the awareness is calculated as a function from advertising and star power. Distribution of the movies is calculated as a function from budget, ads and timing. Next, one more neuron takes these lower level features as input and outputs the box office revenue.
+* Budget, ads, star power and timing are the **low level** features(features that we fed the network or those features we can see)
+* Spend, awareness and distribution are the **higher level** features(features that we did not feed the network) but those features which the network learned by itself by analyzing relationships between neurons.
+Wkt, deep learning is useful for text and image data. For rn, we'll be focusing on images and how they are used in computer vision applications.
+
+## **Computer Vision:**
+* To help computers see and understand content of images.
+* Eg: Self driving cars. They use cameras to capture images from the environment so that the car can detect objects, traffic signs, etc.
+* To actually understand how it works, we need to find out what image data looks like.
+* An image is made up of pixels. These pixels contain info about colors and intensities.
+* For grayscale images, each pixel intensity can be represented as a number b/w 0 and 255.
+* For colored images, images are in the RGB format, 3 channels are needed, one channel for each color.
+So, basically you'll need 3 times the data you to store a color image compared to a grayscale one.
+* These pixels are basically a bunch of numbers and they can used as features for your model.
+* Eg: Before passing the images into the network, you need to convert it into numbers so we have features to input to the model. Suppose an image resolution is 284,429 pixels, if it is a grayscale image, then we have 284,429=121836 features. If we have a colored image, then 248,429,3=365508, then they are fed to the model as input.
+* Eg: In face recognition, intensities of each pixel is fed to a neural network, neurons in the earlier stages detect edges, next stages, eyes and noses are detected. Finally, shapes of faces are detected. In the end, network will put all of this together to output the name of the person in the image.
+* Eg: A neural network to classify whether an image is a truck or a car. 
+    1) The images are transformed into numbers(pixel intensities)
+    2) The numbers(pixel intensities)are fed to the nn.
+    3) Neurons will learn to detect edges.
+    4) Next, Neurons will learn more complex objects like wheels, doors and windows.
+    5) Next, the shapes of vehicles are detected.
+    6) Image is classified as a truck or a car. 
+* While training, you just to provide a dataset of all the images and the respective labels for the faces, the network extracts the features by itself, which it finds necessary.
+* Applications:
+    * Face recognition
+    * Self-driving vehicles
+    * Auto detection of tumors in CT scans
+    * Deep fake(generate new faces in videos they weren't in)
+
+Wkt, deep learning is also useful while working with text data and how it is used in Natural Language Processing.
+
+## **Natural Language Processing(NLP):**
+* NLP is the ability for computers to understand the meaning of human language.
+* Eg: You can see in the slide, in which the model is able to locate and classify named entities in the text into pre-defined categories
+such as names of a person or locations.
+* Previously, our features for the model were numbers but for text data it is to **count the number of times important words appear in text(bag of words).**
+* Eg of **bag of words:** Two sentences namely:
+    1) U2 is a great band
+    2) Queen is a great band
+    Here, write down all the possible words from both the sentences and their counts without repetition of words. Make this table for both sentences.
+* One more eg for bag of words:
+    1) That book is not great
+    You can see from the slide that, **great** gets added to the word count table, even though the sentiment towards the book is opposite.
+    To solve this, we use **bag of words n grams**.
+    This is taking n no. of words together and counting their occurences to capture more information.
+* Bag of words n grams is good and simple, but it can't capture synonyms in the text data. Eg: Sky-blue, aqua, etc. They all mean blue.
+* Enter **Word Embeddings**
+with this it **creates features that group together similar words.**
+Eg: Word embeddings can create similar features for synonyms of blue.
+Eg: if we take the features for "King", subtract the features for "man", and add the features for "woman", we get a set of features that are very close to those of "queen".
+Eg: After mapping words or sentences to numbers, with the bag of words technique or using word embeddings, we can pass them to a neural network whose job it is to translate the input sentence to a different language. Here you can see the dutch sentence, "met of zonder jou", being translated to "with or without you".
+## **Note:**
+As you increase the value of n, the occurrences of n-grams decreases, because we get less words to group with.
+* **Applications:**
+    * Google Translate
+    * Chatbots
+    * Personal Assistants(Alexa)
+    * Sentiment Analysis(quantify how positive or negative the emotion expressed by a segment of text is)
+* Ultimately why deep learning is preferred over machine learning when it comes to image and text data:
+    * Complex problems
+    * Auto feature extraction
+    * Performance improves with data, which is not the case with machine learning
+
+CV | NLP | ML
+----- | ----- | ------
+App that takes pic of detected faces | Alexa understanding what you've said. | Predicting temp in New York tomorrow.
+Searching for images on Google | Auto completing text | Clustering telecom customers based on money spent in SMS, calls, etc.
+
+* Limitations of AI:
+    * Data should have equal distribution amongst the various classes. Otherwise it might predict the class which has the most amount of data even when it is wrong. 
+    * Explainability of model:
+        * ML model:
+        Let's examine a typical problem in Explainable AI. Suppose a hospital is using a traditional machine learning model to look at diabetes patient data. The trained model can tell us two things. First, it can predict the onset of Type 2 diabetes. Second, it can say which features were important in making this decision. This is the "explainable" part. This additional explainability can provide important insights for doctors, like if blood pressure is an important predictor of future diabetes.
+        * DL model:((black box)i.e don't need to explain)
+        Contrast that example with a typical deep learning problem. Suppose we want to recognize hand-written letters. We don't really care why a particular image was classified as an "a", as long as the predictions are highly accurate. Deep learning is a perfect solution to this problem because we don't care about explainability in this case.
 
 
 
-        
 
 
 
+
+ 
+
+ 
+   
