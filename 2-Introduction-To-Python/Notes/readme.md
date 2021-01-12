@@ -105,6 +105,71 @@ print("I started with $" + str(savings) + " and now have $" + str(result) + ". A
 # I started with $100 and now have $194.87171000000012. Awesome!
 ```
 
+# Lists:
+## Why lists?
+All those other datatypes can only store a single value.
+With Lists you can store a collection of data(strings, integers, floats and also other lists). For eg: It could be a list of all people in the house
+
+## Concepts:
+1) List creation:
+```python
+# list creation
+family_members = ['Appa','Amma','Muchla','Nanu']
+```
+
+2) Empty list creation:
+```python
+# empty list creation
+family = []
+```
+
+3) Printing type of a list:
+```python
+print(type(family_members))
+# <class 'float'>
+```
+
+4) List inside a list(sub-list):
+```python
+family=[["Dad",185],"Mom",200]]
+```
+
+5) Indexing a list:
+* You index a list to get a specific element from a list
+* Indexing starts from 0
+* If you supply an invalid index, an **IndexError: list index out of range** is returned.
+```python
+family_members = ['Appa','Amma','Muchla','Nanu']
+print(family_members[0])
+# Appa
+
+# Reverse indexing in a list
+print(family_members[-1])
+# Nanu
+
+print(family_members[4])
+# IndexError: list index out of range
+```
+
+6) Slicing a list:
+* You'd slice a list to obtain a subset of a list:
+* Say, you have a list of 5 people, you are only interested in the first 2 ppl. Then you'd use slicing.
+```python
+ppl=['James','John','Mary','Kuri','Mari']
+print(ppl[0:2])
+# James, John
+
+# printing the full list
+print(ppl[0:])
+
+# Slicing from back of the list
+print(ppl[-1:-3])
+# Mari, Kuri, Mary 
+```
+
+
+
+
 
 
 
