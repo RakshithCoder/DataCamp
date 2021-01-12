@@ -131,7 +131,7 @@ print(type(family_members))
 
 4) List inside a list(sub-list):
 ```python
-family=[["Dad",185],"Mom",200]]
+family=[["Dad",185],["Mom",200]]
 ```
 
 5) Indexing a list:
