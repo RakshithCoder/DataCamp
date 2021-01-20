@@ -205,7 +205,7 @@ my_list+["me",1.9]
 print(my_list)
 # [1,2,3,me,1.9]
 ```
-Removing an element:
+* Removing an element:
 ```python
 my_list=[1,2,3]
 del(my_list[1])
