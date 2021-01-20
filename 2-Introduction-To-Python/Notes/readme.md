@@ -167,6 +167,52 @@ print(ppl[-1:-3])
 # Mari, Kuri, Mary 
 ```
 
+7) Lists of lists:
+```python
+x = [["a", "b", "c"],
+     ["d", "e", "f"],
+     ["g", "h", "i"]]
+x[2][0]  # g
+x[2][:2]  # g, h
+```
+
+8) Manipulating list elements:
+* Sometimes you'd want to change only a specific element in a list
+```python
+my_list=[1,2,3]
+my_list[2]=5
+print(my_list)
+# 1,2,5
+```
+* Changing an entire slice of elements
+```python
+my_list=[1,2,3]
+my_list[0:2]=[2,4]
+print(my_list)
+# 2,4,3
+```
+* Adding an element:
+```python
+my_list=[1,2,3]
+my_list+1.9
+print(my_list)
+# [1,2,3,1.9]
+```
+* Adding a list:
+```python
+my_list=[1,2,3]
+my_list+["me",1.9]
+print(my_list)
+# [1,2,3,me,1.9]
+```
+Removing an element:
+```python
+my_list=[1,2,3]
+del(my_list[1])
+print(my_list)
+# [1,3]
+```
+
 
 
 
