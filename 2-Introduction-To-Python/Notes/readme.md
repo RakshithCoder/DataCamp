@@ -213,6 +213,61 @@ print(my_list)
 # [1,3]
 ```
 
+# Functions:
+## Why functions?
+Basically, we create functions for code reusability.
+What I mean by that is write code once, which you know for sure that you'll use it many more times, so that you won't have to write it again and again.
+
+## Concepts:
+We could define our own function and use for the purpose stated. In this case since, we made our own function it is like a **white box**.
+Or, in other cases, we could use(call) other functions created by others(built-in functions), that time it will be a **black box**
+we won't know and most time we would not care how it's made, we'd only focus on using it in our application.
+
+1) Type of:
+* Sometimes we'd want to know the type of maybe a variable or a data structure, to help in debugging and understanding our code.
+```python
+a=5
+print(type(a))
+# <class 'int'>
+```
+
+2) Maximum element:
+* Sometimes we'd want to know the maximum element in a list or a tuple.
+```python
+heights=[170,158,140]
+print(max(heights))
+# 170
+```
+
+3) Rounding an integer:
+```python
+num=1.68
+print(round(num))  # 2
+print(round(num,1))  # 1.7 (rounded to 1 decimal place)
+```
+
+4) Help:
+* Help function is used to for us to get to know a function better(what arguments must be passed, what arguments are optional, what a function returns)
+* After help is run, if something like this comes up,
+complex(real[, imag]) then it means real is a required argument and imag is an optional argument.
+```python
+print(help(round))
+```
+
+5) int(),str() and all those which we saw earlier in Type casting are also functions
+
+6) Length of a list:
+* To find how many elements are present in a list
+```python
+some_list = [1,2,3,4,4,5,6,6,7,7,8,8,8]
+print(len(some_list))
+# 13
+```
+
+
+
+
+
 
 
 
