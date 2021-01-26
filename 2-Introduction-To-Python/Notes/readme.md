@@ -264,13 +264,121 @@ print(len(some_list))
 # 13
 ```
 
+7) Sorting a data structure:
+```python
+age_list = [10,6,11,5]
+sorted_list=sorted(age_list)
+print(sorted_list, reverse=True)
+# [11,10,6,5]
+```
 
+# Methods:
+* Various data structures like str, list, etc are actually classes and they contain functions inside them. They are called methods.
 
+## List methods:
+1) Index:
+* To get the index of a specific element in a list.
+* **Note:** Index method is also present in strings
+```python
+my_list = [1,2,3,4,5]
+print(my_list.index(2))
+# 1
+```
 
+2) Count:
+* To count the occurence of a specific element.
+```python
+my_list = [1,2,3,4,5]
+print(my_list.count(2))
+# 1
+```
 
+3) Append:
+* To add an element to the end of a list.
+```python
+my_list = [1,2,3]
+print(my_list.append(4))
+# [1,2,3,4]
+```
 
+## String methods:
+1) Capitalize:
+* To capitalize the first element in the string.
+```python
+my_string = 'raks'
+print(my_string.capitalize())
+# 'Raks'
+```
 
+2) Replace:
+* Replace a certain character/s with a different set.
+```python
+my_string = 'liz'
+print(my_string.replace('z', "sa"))
+# 'lisa'
+```
 
+3) Upper:
+* Converts all the characters to uppercase.
+```python
+my_string = 'liz'
+print(my_string.upper())
+# 'LIZ'
+```
 
+# Packages:
+## What are packages?
+* It is directory of python **scripts.**
+* Each script is called a **module.**
+* These modules consists of **methods** designed to solve a particular problem.
+* A package would look something like this...
+    * package/
+        * mod1.py
+        * mod2.py
 
+Eg: Numpy-to efficiently work with arrays, Matplotlib for data viz and scikit-learn for ml.
 
+## How do use them?
+* Not all of these packages are by default in python.
+* You have to install them.
+
+## How to install them?
+* Steps:
+1) Search for pip:
+    http://pip.readthedocs.org/en/stable/installing/
+2) Download pip:
+    get-pip.py 
+3) Open terminal:
+    **python get-pip.py**
+
+## Everything is setup now, note that this only has to be done once.After this, just install the specific package you need.
+
+Eg: pip install numpy
+
+## Import the installed package:
+* To use a the package, it has to be imported in your script.
+```python
+import numpy
+numpy.array([1,2,3])
+```
+
+## You could import the package and rename it for simplicity:
+```python
+import numpy as np
+np.array([1,2,3])
+```
+
+## Specific import:
+* Sometimes you would only want to import a specific module from a package.
+```python
+from numpy import array
+array([1,2,3])
+```
+
+## Note:
+* It is always best to not use specific import when the code is huge. Because somewhere in between you'd see the name of the imported module and get confused if it is from a specific package or a user-defined one.
+```python
+import numpy as np
+np.array([1,2,3])
+```
+* This is way more specific, because we are explicitly specifiying from where we are using array.
