@@ -1,4 +1,9 @@
+---
+modified: 2021-01-30T22:13:44+05:30
+---
+
 # Python
+
 ## Why learn Python?
 * Easy to learn, because of easy syntax
 * Many libraries which makes work easy because you don't have to re-write them yourself.
@@ -382,3 +387,15 @@ import numpy as np
 np.array([1,2,3])
 ```
 * This is way more specific, because we are explicitly specifiying from where we are using array.
+
+# Numpy:
+* Lists are good. But, as data gets bigger and bigger lists are more time consuming. So we use numpy(numeric python library) which is faster and more effecient than list.
+
+## Installation:
+* Numpy is not available by default. We have to install it. 
+* **pip install numpy**
+
+## Using it:
+```python
+import numpy as np
+```
