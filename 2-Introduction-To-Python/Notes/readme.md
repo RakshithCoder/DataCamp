@@ -399,3 +399,156 @@ np.array([1,2,3])
 ```python
 import numpy as np
 ```
+
+## How is it more efficient(Advantage)?
+```python
+# List example
+height = [1.73, 1.68, 1.71, 1.89, 1.79]
+weight = [65.4, 59.2, 63.6, 88.4, 68.7]
+print(weight / height ** 2)
+# TypeError: unsupported operand type(s) for **: 'list' and 'int'
+
+# Numpy example:
+import numpy as np
+np_height = np.array(height)
+print(np_height)
+# array([ 1.73,  1.68,  1.71,  1.89,  1.79])
+
+np_weight = np.array(weight)
+print(np_weight)
+# array([ 65.4,  59.2,  63.6,  88.4,  68.7])
+
+bmi = np_weight / np_height ** 2
+print(bmi)
+# array([ 21.852,  20.975,  21.75 ,  24.747,  21.441])
+```
+
+## Disadvantage:
+* All the elements in the a numpy array must be of a single type.
+```python
+np.array([1.0, "is", True])
+# array(['1.0', 'is', 'True'], dtype='<U32')
+# Everything is converted to a string in this case.
+# It is called "type coercion"
+```
+
+## Other behaviours:
+```python
+python_list = [1, 2, 3]
+numpy_array = np.array([1, 2, 3])
+# or numpy_array = np.array(python_list)
+
+python_list + python_list
+# [1, 2, 3, 1, 2, 3]
+
+numpy_array + numpy_array
+# [2, 4, 6]
+
+python_list * 3
+# [1, 2, 3, 1, 2 ,3, 1, 2 ,3]
+
+numpy_array *3
+# [3, 6, 9]
+```
+
+## Note:
+* Indexing is similar to lists.
+```python
+bmi[bmi>23]
+# array([24.54])
+```
+
+## Example of boolean indexing:
+```python
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array
+light = np.array(bmi < 21)
+
+# Print out light
+print(light)
+
+print(type(light))
+# numpy.ndarray
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
+```
+
+## Attributes of numpy:
+* shape:
+    ```python
+    print(light.shape)
+    ```
+
+## Numpy 2D array:
+```python
+np_2d = np.array([[1.73,1.68,1.71,1.89,1.79],
+                 [65.4,59.2,63.6,88.4,68.7]])
+
+print(np_2d[0][1])
+# both are the same 
+print(np_2d[0,2])  # row,col
+
+# suppose you want height and weight of 2nd and 3rd person.
+print(np_2d[:,1:3])
+
+# suppose you want only weight of all people
+print(np_2d[1,:])
+```
+
+## Other operations:
+```python
+import numpy as np
+np_mat = np.array([[1, 2],
+                   [3, 4],
+                   [5, 6]])
+np_mat * 2
+'''
+np.array([[1, 2],
+         [3, 4],
+         [5, 6]])
+'''
+np_mat + np.array([10, 10])
+'''
+array([[11, 12],
+       [13, 14],
+       [15, 16]])
+'''
+np_mat + np_mat
+'''
+array([[ 2,  4],
+       [ 6,  8],
+       [10, 12]])
+'''
+```
+
+## Numpy basic statistics:
+* Mean:
+```python
+import numpy as np
+np.mean(np_city[:,0])  # considering all rows, and the first column, then taking the mean of those.
+```
+* Median
+```python
+np.median(np_city[:,0])
+```
+* Standard deviation:
+```python
+np.std(np_city[:,0])
+```
+*Correlation
+```python
+np.corrcoef(np_city[:,0], np_city[:,0])  # To find correlation b/w first and second column.
+```
+
+## Note:
+* Basically why numpy is faster than list?
+A list is a compound datatype, it might contain other data types.
+But a numpy array would contain only a single datatype throughout.
+
