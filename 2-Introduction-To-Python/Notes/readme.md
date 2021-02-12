@@ -1,5 +1,5 @@
 ---
-modified: 2021-01-30T22:13:44+05:30
+modified: 2021-02-12T16:25:08+05:30
 ---
 
 # Python
@@ -542,7 +542,7 @@ np.median(np_city[:,0])
 ```python
 np.std(np_city[:,0])
 ```
-*Correlation
+* Correlation:
 ```python
 np.corrcoef(np_city[:,0], np_city[:,0])  # To find correlation b/w first and second column.
 ```
@@ -551,4 +551,3 @@ np.corrcoef(np_city[:,0], np_city[:,0])  # To find correlation b/w first and sec
 * Basically why numpy is faster than list?
 A list is a compound datatype, it might contain other data types.
 But a numpy array would contain only a single datatype throughout.
-
