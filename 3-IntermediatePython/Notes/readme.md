@@ -133,3 +133,43 @@ plt.grid(True)
 # Show the plot
 plt.show()
 ```
+
+## Dictionary:
+* Key value pairs
+* You could do the same with two lists, take the index from one list and use that as the index for the other list.
+* But, it's just too much useless code.
+* Also, dictionaries are faster compared to lists, cause lists store index wise, so data is in linear fashion, but when it comes to dictionaries, it is randomly allocated and accessing the value is based on the key.
+* Creating a dictionary:
+    ```python
+    pop_list = {"India":7,"China":10,"Japan":3}
+    ```
+* Accessing a dictionary element from the key:
+    ```python
+    print(pop_list['India'])
+    #7
+    ```
+* Retrieve all keys from a dictionary:
+    ```python
+    print(pop_list.keys())
+    print(type(pop_list.keys())
+    #dict_keys(['germany', 'norway', 'spain', 'france'])
+    #<class 'dict_keys'>
+    ```
+* Dictionary keys must be unique, even if you add multiple keys, with same or different values, it will only consider the latest one:
+    ```python
+    world = {"afghanistan":30.55, "albania":2.77, "algeria":39.21, "albania":2.81}
+    print(world)
+    #{'afganistan':30.55,'albania':2.81,'algeria':39.21}
+    ```
+* Keys have to be immutable objects like bools, int, string:
+    ```python
+    random_shit = {1:"one", "two":2, True:"3"}
+    ```
+* Adding data to a dic: If key exists the value is updated, otherwise key and value are added.
+    ```python
+    random_shit[3] = 2000
+    ```
+* Deleting a key:
+    ```python
+    del(random_shit[True])
+    ```
