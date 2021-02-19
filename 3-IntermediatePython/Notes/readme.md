@@ -173,3 +173,64 @@ plt.show()
     ```python
     del(random_shit[True])
     ```
+
+# Pandas:
+## What is pandas?
+* Representing data in rows and columns format(excel, relational databases)
+ 
+## Why would you use pandas over numpy when you could do the same shit with numpy?
+* See in most cases, when it comes to excel or relational databases, each column would be of different datatypes, so have to nest each numpy array because w.k.t each numpy array can have only one datatype. We'd have to create a lot of nested arrays. This is not an efficient way.
+
+## Creating a pandas dataframe(2d data structure) from a dictionary:
+```python
+import pandas as pd
+random_shit = {1:"one", "two":2, True:"3"}
+brics = pd.DataFrame(random_shit)
+# It will have default indices.
+```
+
+## You can give your own indices:
+```python
+brics.index = ['BR', 'RU', 'JP', 'IN', 'US']
+```
+
+## Creating a pandas dataframe from a csv file:
+```python
+brics = pd.read_csv("bjbj.csv", index_col=0)  #remove the initial column, which would contain only column index like 0,1,2,... and make the first column the zeroth index
+```
+
+## Column access:
+```python
+# specifying the column name
+brics["country"]
+# returns the entire column
+type(brics["country"])
+# pandas.core.series.Series (series is a 1d labelled array)
+type(brics[["country"]])
+# pandas.core.frame.DataFrame
+print(brics[["country","capital"]]) 
+```
+
+## Row access:
+```python
+brics[1:4]
+```
+
+## Label based indexing:
+* Main advantage of using loc is because, you can do both row and column based indexing at the same time. Check example 3 and 4 below.
+```python
+brics.loc["RU"]  # series
+brics.loc[["Ru"]]  # DataFrame
+# If you want to do something like, np.array(row,column)
+brics.loc[["RU", "IN", "CH"], ["country", "capital"]]
+# If you want all the rows and only specific columns
+brics.loc[:, ["country", "capital"]]
+```
+
+## Integer position based indexing:
+```python
+brics.iloc[1]
+brics.iloc[[1]]
+brics.iloc[[0,1,2],[0,1]]  # np.array(row,column)
+brics.iloc[;, [0,1]]
+```
