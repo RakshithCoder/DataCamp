@@ -234,3 +234,75 @@ brics.iloc[[1]]
 brics.iloc[[0,1,2],[0,1]]  # np.array(row,column)
 brics.iloc[;, [0,1]]
 ```
+
+## Comparison operators or relational operators:
+```python
+>  # greater than
+<  # less than
+>=  # greater than or equal to
+<=  # less than or equal to
+==  # equality operator
+!=  # inequality operator
+```
+
+## Note:
+* Always compare with same datatypes.
+* When comparing with strings, character wise comparision takes place.
+    * Eg: "raks" < "rams" 
+    returns True as 'k' comes before 'm' alphabetically.
+    
+## Comparing arrays:
+```python
+my_house = np.array([18.0, 20.0, 10.75, 9.50])
+your_house = np.array([14.0, 24.0, 14.25, 9.0])
+print(my_house > 18)
+# [False  True False False]
+# Behind the scenes what exactly happens is it creates another numpy array and assigns 18 to each element and then it does an element wise comparision
+
+print(my_house < your_house)
+# [False  True  True False]
+# Also, two numpy arrays can be compared. Note that the length of the arrays must be equal to compare this way. If length is unequal, there are other ways to compare.
+```
+
+## Boolean operators:
+* and 
+* or 
+* not
+* These boolean operators work as you expect in normal situations like strings, integers, floats, etc, but fail directly with numpy arrays.
+* Eg:
+    ```python
+    my_house = np.array([18.0, 20.0, 10.75, 9.50])
+    my_house > 10 and my_house < 16
+    # This would return an error, that's why we have logical and, or and not for numpy arrays. 
+    ```
+
+## Boolean operators for numpy:
+1) logical_and()
+    ```python
+    np.logical_and(my_house > 10, my_house < 16)
+    # array([False, False, True, False])
+
+    my_house[np.logical_and(my_house > 10, my_house < 16>)]
+    # array([10.75])
+    ```
+2) logical_or()
+3) logical_not()
+* It is same syntax for those two too!
+
+## Conditional operators:
+* if
+* elif
+* else
+
+## Subsetting pandas dataframe
+* Example: Get all data with area over 8 million kms
+```python
+brics[brics.loc[;, "area"] > 8]
+brics[brics["area"]]
+# Both are equal
+```
+
+## Boolean operators can also be used with pandas:
+```python
+brics[np.logical_and(brics["area"] > 8 , brics["area"] < 12)]
+```
